@@ -1,0 +1,33 @@
+{
+	"agcgw":{
+		"backurl":"connect-drcn.dbankcloud.cn",
+		"url":"connect-drcn.hispace.hicloud.com"
+	},
+	"client":{
+		"cp_id":"1340007000005033375",
+		"product_id":"736430079244590071",
+		"client_id":"421799024081765376",
+		"client_secret":"F21AED9E371D245A5F905AB47BC8BE32966C26E80B811F7A8D786EE9EAC065F8",
+		"app_id":"102679135",
+		"package_name":"com.carxtech.carxdr2.huawei",
+		"api_key":"CgB6e3x9keWnu8s/GXHLp09yyv0TnGTBR2OBW3+Pe1flxRO5PZ8S3V9qCETEmfJj6tkKZuoI9lpX6fKqEtbuJGw1"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-drcn.dt.hicloud.com,datacollector-drcn.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"search":{
+			"url":"https://search-drcn.cloud.huawei.com"
+		},
+		"cloudstorage":{
+			"storage_url":"https://agc-storage-drcn.platform.dbankcloud.cn"
+		},
+		"ml":{
+			"mlservice_url":"ml-api-drcn.ai.dbankcloud.com,ml-api-drcn.ai.dbankcloud.cn"
+		}
+	},
+	"region":"CN",
+	"configuration_version":"1.0"
+}

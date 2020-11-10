@@ -1,0 +1,6 @@
+{
+	"name" : "carx.huawei.appgallery",
+	"description" : "Huawei AppGallery",
+	"version" : "1.0.0",
+	"dependencies": []
+}
