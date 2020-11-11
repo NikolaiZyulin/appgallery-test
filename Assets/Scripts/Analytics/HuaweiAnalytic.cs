@@ -12,7 +12,6 @@ namespace Analytics
 		{
 			HiAnalyticsTools.EnableLog();
 			m_analytics = HiAnalytics.GetInstance();
-			m_analytics.SetAnalyticsEnabled(true);
 		}
 
 		public void LogEvent(string action)

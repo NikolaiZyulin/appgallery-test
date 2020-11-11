@@ -1,0 +1,3 @@
+[submodule "Assets/Modules/appgallery-package"]
+	path = Assets/Modules/appgallery-package
+	url = ../../CarXTechnologies/huawei-appgallery-package.git

@@ -30,3 +30,5 @@ Assets/Plugins/FMOD/Cache
 Assets/Plugins/FMOD/Cache.meta
 Assets/GeneratedLocalRepo/
 Assets/GeneratedLocalRepo.meta
+/Builds/
+*.apk
