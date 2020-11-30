@@ -14,6 +14,8 @@
     <meta-data android:name="install_channel" android:value="AppGallery" />
     <provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:authorities="com.carxtech.carxdr2.huawei.hms.update.provider" tools:replace="android:authorities" android:exported="false" android:grantUriPermissions="true" />
     <provider android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" android:authorities="com.carxtech.carxdr2.huawei.updateSdk.fileProvider" tools:replace="android:authorities" android:exported="false" android:grantUriPermissions="true" />
+    <provider android:name="org.unity.android.hms.unity.provider.AnalyticsContentProvider" android:authorities="com.carxtech.carxdr2.huawei" tools:replace="android:authorities" android:exported="false" android:grantUriPermissions="true" />
+    <provider android:name="com.yasirkula.unity.UnitySSContentProvider" android:authorities="com.carxtech.carxdr2.huawei" tools:replace="android:authorities" android:exported="false" android:grantUriPermissions="true" />
   </application>
   <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA" />
   <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />

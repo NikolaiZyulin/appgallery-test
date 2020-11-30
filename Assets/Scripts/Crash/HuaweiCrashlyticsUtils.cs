@@ -1,19 +1,16 @@
 ﻿using System;
 using HuaweiMobileServices.Crash;
+using UnityEngine;
 
 namespace Services.Debug
 {
 	public class HuaweiCrashlyticsUtils : ICrashlyticsUtils
 	{
-		private AgConnectCrash m_crashlytics;
+		private IAGConnectCrash m_crashlytics;
 
 		public void Init(Action<bool> onComplete)
 		{
-			if (AGConnectInstance.GetInstance() == null)
-			{
-				AGConnectInstance.Initialize();
-			}
-			m_crashlytics = AgConnectCrash.GetInstance();
+			m_crashlytics = AGConnectCrash.GetInstance();
 			m_crashlytics.EnableCrashCollection(true);
 			onComplete?.Invoke(true);
 		}
@@ -25,7 +22,7 @@ namespace Services.Debug
 
 		public void Crash()
 		{
-			m_crashlytics.TestIt();
+			UnityEngine.Diagnostics.Utils.ForceCrash(0);
 		}
 
 		public void Log(string log)

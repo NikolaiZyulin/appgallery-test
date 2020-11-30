@@ -20,20 +20,34 @@ namespace AuthServices
 			{
 				var authParams = new HuaweiIdAuthParamsHelper(HuaweiIdAuthParams.DEFAULT_AUTH_REQUEST_PARAM_GAME).SetIdToken().CreateParams();
 				m_authService = HuaweiIdAuthManager.GetService(authParams);
-				
+
 				m_initialized = true;
 
 			}
-			
-			m_authService.SignOut();
-			m_authService.StartSignIn((authId) =>
+
+			var signOut = m_authService.SignOut();
+			signOut.AddOnSuccessListener(success =>
+			{
+				SignIn(callback);
+			});
+			signOut.AddOnFailureListener(error =>
+			{
+				SignIn(callback);
+			});
+		}
+
+		private void SignIn(Action<AuthServiceResult> callback)
+		{
+			var signIn = m_authService.SilentSignIn();
+			signIn.AddOnSuccessListener(authId =>
 			{
 				TimeController.instance.CallFromMainThread(() =>
 				{
 					m_isLoggedIn = true;
 					callback?.Invoke(new AuthServiceResult(true, authId.DisplayName));
 				});
-			}, (error) =>
+			});
+			signIn.AddOnFailureListener(error =>
 			{
 				TimeController.instance.CallFromMainThread(() =>
 				{

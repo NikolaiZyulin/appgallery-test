@@ -9,7 +9,7 @@ public static class HuaweiAdsIds
 	public const string InterstitialId = "testb4znbuh3n2";
 	public const string VideoId = "testx9dtjwj8hp";
 #else
-	public const string InterstitialId = "m4pvr4sj1o";
+	public const string InterstitialId = "j722vwxxgh";
 	public const string VideoId = "v913bjzslv";
 #endif
 }
